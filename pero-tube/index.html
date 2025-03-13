@@ -8,6 +8,14 @@
     <!-- Daisy UI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- style  -->
+     <style>
+        .active{
+            background-color: rgb(158, 15, 15);
+            color: white;
+        }
+     </style>
 </head>
 <body>
     <header>
@@ -27,15 +35,21 @@
     <!-- Another Middle nav  -->
     <nav id="category-container" class="flex py-5 justify-center gap-5">
         <div>
-            <button class="btn btn-sm text-white bg-[#FF1F3D]">All</button>
+            <button id="btn-all" onclick="loadVideos()" class="btn btn-sm ">All</button>
         </div>
     </nav>
 
     <!-- // Videos Section  -->
-     <section id="video-container">
+     <section id="video-container" class="w-11/12 mx-auto grid grid-cols-4 gap-3">
+
+        <div class="py-20 col-span-full flex flex-col justify-center items-center text-center">
+            <img class="w-[120px]" src="./assets/Icon.png" alt="">
+            <h2 class="text-2xl font-bold">
+                Oops!! Sorry, There is no content here 
+            <h2>
+        </div>
 
      </section>
-
 
 
     <script src="script/index.js"></script>
