@@ -24,10 +24,10 @@
                 <img class="w-[120px]" src="assets/Logo.png" alt="">
             </div>
             <div class="sort">
-                <button class="btn">Short By View</button>
+                <input id="search-input" type="text" placeholder="Type here" class="input" />
             </div>
             <div class="blogs]">
-                <button class="btn  bg-[#FF1F3D] text-white">Blogs</button>
+                <button class="btn  bg-[#FF1F3D] text-white">Short By View</button>
             </div>
         </nav>
     </header>
@@ -38,6 +38,11 @@
             <button id="btn-all" onclick="loadVideos()" class="btn btn-sm ">All</button>
         </div>
     </nav>
+
+    <!-- added loading spinner  -->
+    <section id="loader">
+        <span class="loading loading-dots loading-xl"></span>
+    </section>
 
     <!-- // Videos Section  -->
      <section id="video-container" class="w-11/12 mx-auto grid grid-cols-4 gap-3">
@@ -50,6 +55,23 @@
         </div>
 
      </section>
+
+
+     <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+<dialog id="video_details" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <div id="details_container">
+
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog> 
 
 
     <script src="script/index.js"></script>
